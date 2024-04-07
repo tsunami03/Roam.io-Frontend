@@ -10,8 +10,17 @@ const Feed = () => {
         {" "}
         Home{" "}
       </Heading>
-      <PostDraft />
-      <Box borderRight="1px solid" borderColor="gray.200" h="100vh">
+
+      <Box
+        overflowY="auto"
+        height="calc(100vh - 50px)"
+        borderRight="1px solid"
+        borderColor="gray.200"
+        h="100vh"
+        sx={{ "::-webkit-scrollbar": { display: "none" } }}
+        msx={{ "&::-webkit-scrollbar": { display: "none" } }}
+      >
+        <PostDraft />
         <Post />
         <Post />
         <Post />

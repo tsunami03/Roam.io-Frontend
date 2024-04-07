@@ -15,7 +15,7 @@ const Homepage = () => {
         <div style={{ flex: "2" }}>
           <Sidebar />
         </div>
-        <div style={{ flex: "3" }}>
+        <div style={{ flex: "5" }}>
           <Feed />
         </div>
         <div style={{ flex: "2" }}>
