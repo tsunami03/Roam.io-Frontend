@@ -1,16 +1,12 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, Image } from "@chakra-ui/react";
 import React from "react";
 import Post from "./Post";
 import PostDraft from "./PostDraft";
+import bg from "../assets/login-bg.avif";
 
-const Feed = () => {
+const Feed = ({ withDraft }) => {
   return (
     <>
-      <Heading size="md" padding="10px">
-        {" "}
-        Home{" "}
-      </Heading>
-
       <Box
         overflowY="auto"
         height="calc(100vh - 50px)"
@@ -20,7 +16,7 @@ const Feed = () => {
         sx={{ "::-webkit-scrollbar": { display: "none" } }}
         msx={{ "&::-webkit-scrollbar": { display: "none" } }}
       >
-        <PostDraft />
+        {withDraft && <PostDraft />}
         <Post />
         <Post />
         <Post />

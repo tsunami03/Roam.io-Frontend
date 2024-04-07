@@ -1,11 +1,20 @@
 import React, { useState } from "react";
-import { Box, Flex, Image, Text, Input, IconButton } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Image,
+  Text,
+  Input,
+  IconButton,
+  HStack,
+} from "@chakra-ui/react";
 import {
   AiOutlineHeart,
   AiOutlineComment,
   AiOutlineSend,
 } from "react-icons/ai";
 import bg from "../assets/login-bg.avif";
+import { MdLocationOn, MdOutlineLocationOn, MdPostAdd } from "react-icons/md";
 
 const Comment = () => {
   return (
@@ -66,7 +75,15 @@ const Post = () => {
   const [showComments, setShowComments] = useState(false);
   return (
     <>
-      <Box p="4" borderBottom="1px" borderColor="gray.200">
+      <Box p="4" borderBottom="1px" borderColor="gray.200" position="relative">
+        {/* Location Item */}
+        <Box position="absolute" mt="25px" mr="10px" top="1" right="1">
+          <HStack>
+            <MdLocationOn />
+            <Text fontSize="sm">Location</Text>
+          </HStack>
+        </Box>
+
         {/* User Info */}
         <Flex alignItems="center" mb="2">
           <Image src={bg} borderRadius="full" boxSize="40px" mr="2" />

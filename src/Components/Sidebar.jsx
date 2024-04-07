@@ -14,7 +14,8 @@ import {
   AiOutlineSetting,
   AiOutlineLogout,
 } from "react-icons/ai";
-import React from "react";
+import { React } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -27,22 +28,28 @@ const Sidebar = () => {
     >
       <VStack align="flex-start" spacing="4">
         <Button variant="unstyled" _hover={{ color: "blue.500" }}>
-          <Flex alignItems="center">
-            <Icon as={AiOutlineHome} fontSize="lg" mr="2" />
-            <Text fontSize="lg">Home</Text>
-          </Flex>
+          <Link to="/home">
+            <Flex alignItems="center">
+              <Icon as={AiOutlineHome} fontSize="lg" mr="2" />
+              <Text fontSize="lg">Home</Text>
+            </Flex>
+          </Link>
         </Button>
         <Button variant="unstyled" _hover={{ color: "blue.500" }}>
-          <Flex alignItems="center">
-            <Icon as={AiOutlineCompass} fontSize="lg" mr="2" />
-            <Text fontSize="lg">Explore Destinations</Text>
-          </Flex>
+          <Link to="/destinations">
+            <Flex alignItems="center">
+              <Icon as={AiOutlineCompass} fontSize="lg" mr="2" />
+              <Text fontSize="lg">Explore Destinations</Text>
+            </Flex>
+          </Link>
         </Button>
         <Button variant="unstyled" _hover={{ color: "blue.500" }}>
-          <Flex alignItems="center">
-            <Icon as={AiOutlineUser} fontSize="lg" mr="2" />
-            <Text fontSize="lg">Profile</Text>
-          </Flex>
+          <Link to="/profile">
+            <Flex alignItems="center">
+              <Icon as={AiOutlineUser} fontSize="lg" mr="2" />
+              <Text fontSize="lg">Profile</Text>
+            </Flex>
+          </Link>
         </Button>
         <Button variant="unstyled" _hover={{ color: "blue.500" }}>
           <Flex alignItems="center">
@@ -51,10 +58,12 @@ const Sidebar = () => {
           </Flex>
         </Button>
         <Button variant="unstyled" _hover={{ color: "blue.500" }}>
-          <Flex alignItems="center">
-            <Icon as={AiOutlineLogout} fontSize="lg" mr="2" />
-            <Text fontSize="lg">Logout</Text>
-          </Flex>
+          <Link to="/">
+            <Flex alignItems="center">
+              <Icon as={AiOutlineLogout} fontSize="lg" mr="2" />
+              <Text fontSize="lg">Logout</Text>
+            </Flex>
+          </Link>
         </Button>
         <Divider />
       </VStack>

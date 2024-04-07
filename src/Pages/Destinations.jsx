@@ -7,7 +7,7 @@ import Sidebar from "../Components/Sidebar";
 import Feed from "../Components/Feed";
 import Trending from "../Components/Trending";
 
-const Homepage = () => {
+const Destinations = () => {
   const [user, setUser] = useState("test");
   return (
     <div>
@@ -17,9 +17,9 @@ const Homepage = () => {
         </div>
         <div style={{ flex: "5" }}>
           <Heading mb="5" size="md" padding="10px">
-            Home
+            Destinations
           </Heading>
-          <Feed withDraft={true} />
+          <Feed withDraft={false} />
         </div>
         <div style={{ flex: "2" }}>
           <Trending />
@@ -29,4 +29,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default Destinations;

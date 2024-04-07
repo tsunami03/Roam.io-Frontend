@@ -13,9 +13,9 @@ import { FcGoogle } from "react-icons/fc";
 import bg from "../assets/login-bg.avif";
 
 function Login() {
-  const onClickLogin = () => {
-    // Handle login with Google
-    console.log("Login with Google clicked");
+  const redirectToGoogleSSO = () => {
+    const url = `http://localhost:3000/auth/google`;
+    const newWindow = window.open(url, "_self");
   };
 
   return (
@@ -51,7 +51,7 @@ function Login() {
               variant="outline"
               leftIcon={<FcGoogle />}
               borderRadius="100px"
-              onClick={onClickLogin}
+              onClick={redirectToGoogleSSO}
             >
               <Center>
                 <Text>Sign in with Google</Text>
