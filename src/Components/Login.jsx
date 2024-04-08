@@ -1,21 +1,12 @@
-import {
-  Box,
-  Flex,
-  Icon,
-  Heading,
-  Button,
-  Text,
-  Link,
-  Center,
-} from "@chakra-ui/react";
-import { FaTwitter } from "react-icons/fa";
+import React from "react";
+import { Box, Flex, Heading, Button, Text, Center } from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
 import bg from "../assets/login-bg.avif";
 
 function Login() {
-  const redirectToGoogleSSO = () => {
-    const url = `http://localhost:3000/auth/google`;
-    const newWindow = window.open(url, "_self");
+  const redirectToGoogleSSO = async () => {
+    // Redirect to Google SSO endpoint
+    window.location.href = "http://localhost:3000/auth/google";
   };
 
   return (
